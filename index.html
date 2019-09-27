@@ -1,0 +1,415 @@
+ <!DOCTYPE html>
+
+<html><head>
+<title>Shiwei Zhuang - University of Technology Sydney</title>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+<style type="text/css">
+ @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+
+
+	body
+	{
+	font-family:"Roboto",Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;font-weight:300;
+    	background-color : #CDCDCD;
+	}
+    	.content
+	{
+    		width : 900px;
+    		padding : 25px 30px;
+    		margin : 25px auto;
+    		background-color : #fff;
+    		box-shadow: 0px 0px 10px #999;
+    		border-radius: 15px; 
+	}	
+	table
+	{
+		padding: 5px;
+	}
+	
+	table.pub_table,td.pub_td1,td.pub_td2
+	{
+		padding: 8px;
+		width: 850px;
+        border-collapse: separate;
+        border-spacing: 15px;
+        margin-top: -5px;
+	}
+
+	td.pub_td1
+	{
+		width:50px;
+	}
+    td.pub_td1 img
+    {
+        height:120px;
+        width: 160px;
+    }
+	
+	div#container
+	{
+		margin-left: auto;
+		margin-right: auto;
+		width: 820px;
+		text-align: left;
+		position: relative;
+		background-color: #FFF;
+	}
+	div#DocInfo
+	{
+		color: #1367a7;
+		height: 158px;
+	}
+	h4,h3,h2,h1
+	{
+		color: #3B3B3B;
+	}
+	h2
+	{
+		font-size:130%;
+	}
+	p
+	{
+		color: #5B5B5B;
+		margin-bottom: 50px;
+	}
+	p.caption
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 600px;
+	}
+	p.caption2
+	{
+		color: #9B9B9B;
+		text-align: left;
+		width: 800px;
+	}
+	#header_img
+	{
+		position: absolute;
+		top: 0px; right: 0px;
+    }
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+
+    #mit_logo {
+        position: absolute;
+        left: 646px;
+        top: 14px;
+        width: 200px;
+        height: 20px;
+    }
+   
+    table.pub_table tr {
+        outline: thin dotted #666666;
+    }
+    .papericon {
+        border-radius: 8px; 
+        -moz-box-shadow: 3px 3px 6px #888;
+        -webkit-box-shadow: 3px 3px 6px #888;
+        box-shadow: 3px 3px 6px #888;
+	height:120px;
+        width: 160px;
+	margin-top:5px;
+	margin-left:5px;
+	margin-bottom:5px;
+    }
+    .media {
+	outline: thin dotted #666666;
+ 	margin-bottom: 15px;	
+	margin-left:10px;
+    }
+    .media-body {
+	margin-top:5px;
+	padding-left:20px;
+    }
+
+.papers-selected h5, .papers-selected h4 { display : none; }
+.papers-selected .publication { display : none; }
+.paperhi-only { display : none; }
+.papers-selected .paperhi { display : flex; }
+.papers-selected .paperlo { display : none; }
+
+.hidden>div {
+	display:none;
+}
+
+.visible>div {
+	display:block;
+}
+</style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23931362-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23931362-2');
+</script>
+
+<script type="text/javascript">
+    var myPix = new Array("image/profile_correct.jpg","image/profile_feb18.jpeg")
+    function choosePic() {
+        var randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+    };
+</script>
+
+<script>
+$(document).ready(function() {
+  $('.paperlo button').click(function() {
+     $('.papers-container').addClass('papers-selected');
+  });
+  $('.paperhi button').click(function() {
+     $('.papers-container').removeClass('papers-selected');
+  });
+  $('.papers-container').removeClass('papers-selected');
+
+		$('.text_container').addClass("hidden");
+
+		$('.text_container').click(function() {
+			var $this = $(this);
+
+			if ($this.hasClass("hidden")) {
+				$(this).removeClass("hidden").addClass("visible");
+
+			} else {
+				$(this).removeClass("visible").addClass("hidden");
+			}
+		});
+
+});
+</script>
+
+</head>
+
+
+<body>
+<div class="content">
+	<div id="container">
+
+	<table>
+	<tbody><tr>
+	<td><img id="myPicture" src="img/profile.jpg" style="float:left; padding-right:20px" height="200px"></td>
+	<script>choosePic();</script>
+	<td>
+	<div id="DocInfo">
+		<h1>Shiwei Zhuang</h1>
+        Assistant Professor<br>
+	Facaulty of Engineering and Information Technology<br>
+        Office: Room 717, Ho Sin-Hang Engineering <br>
+		Email: <a href="pengzhang.sdu@gmail.com">pengzhang.sdu at gmail.com</a><br>
+        <a href="CV_web.pdf">CV</a> &bull; <a href="https://scholar.google.com/citations?user=9D4aG8AAAAAJ&hl=en">Google Scholar</a> &bull; <a href="https://github.com/metalbubble">Github</a><br>
+	</div><br>
+    <!--
+    <div id="mit_logo">
+        <a href="http://www.mit.edu"><img src="image/mit.gif" height="170px" class="papericon" /></a>
+    </div>
+    -->
+	</td>
+	</tr>
+	</tbody></table>
+	<br>
+
+
+	<h2>Research</h2>
+    <ul>
+        <li>My research is on machine perception and decision, with a focus on enabling machines to sense and reason about the environments through learning more interpretable representations.</li> 
+	<li>My previous works include <a href="http://places2.csail.mit.edu/">Places</a>, <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping(CAM)</a>, <a href="http://netdissect.csail.mit.edu/">Network Dissection</a>, <a href="http://relation.csail.mit.edu/">TRN</a>.</li>
+<!--     
+   <li> My representative work includes the large-scale scene benchmarks <a href="http://places2.csail.mit.edu">Places Database and Places-CNN</a>, <a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/">ADE20K Dataset</a>, as well as neural network interpretation methods <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping (CAM)</a> and <a href="http://netdissect.csail.mit.edu/">Network Dissection</a>. Recently I investigate video scene understanding, with
+     work <a href="http://relation.csail.mit.edu/">Temporal Relational Reasoning</a> and <a href="http://moments.csail.mit.edu/">Moments in Time</a>.</li> 
+-->
+    </ul>
+	
+    <h2>News</h2>
+    <ul>
+    	<li>[2019/09/05] 1 paper is accepted to NeurIPS'19 as spotlight. </li>
+		<li>[2019/09/03] 3 papers are accepted to ICCV'19 (2 orals + 1 poster). See the papers below.</li>
+		<li>[2019/07/25] <a href="https://interpretablevision.github.io/">2nd Tutorial on Interpretable Machine Learning for Computer Vision</a> will be hosted at ICCV'19.</li>
+		<li>[2019/07/01] New <a href="publication/siggraph19_preprint_small.pdf">SIGGRAPH'19 paper</a> on semantic image manipulation. Try the <a href="http://ganpaint.io/demo/">live demo</a>!</li>
+		<li>[2019/07/01] New arXiv preprint on <a href="https://view-parsing-network.github.io/">cross-view semantic segmentation</a>.</li>
+		<li>[2019/04/26] Talks at <a href="http://ganocracy.csail.mit.edu/">MIT GANocracy Workshop</a>, <a href="http://bzhou.ie.cuhk.edu.hk/cvpr19_tutorial/">CVPR'19 Tutorial on Tectures, Objects and Scenes</a>, <a href="https://amlcvpr2019.github.io/">CVPR'19 Adversarial Machine Learning Workshop</a>, and <a href="https://lidchallenge.github.io/">CVPR'19 Learning from Imperfect Data (LID) workshop</a>.</li>
+	
+    <!--
+	<li>[2019/03/05] Welcome to <a href="https://explainai.net/">CVPR'19 Workshop on Explainable AI</a>.
+	<li>[2019/01/09] I am teaching <a href="https://course.ie.cuhk.edu.hk/~ierg6130/">IERG6130 Course on Reinforcement Learning</a>.</li>
+    
+ 	<li>[2018/09/14] <a href="http://relation.csail.mit.edu">Temporal Relation Network</a> is covered by <a href="http://news.mit.edu/2018/machine-learning-video-activity-recognition-0914">MIT News</a> as Today's Spotlight.</a>
+
+        <li>[2018/07/03] The videos for CVPR'18 Tutorial on Interpretable Machine Learning are <a href="https://interpretablevision.github.io/">available</a>.</li>
+    
+    	<li>[2018/05/04] I defended my Ph.D. thesis. Defense talk titled Interpretable Representation Learning for Visual Intelligence is available on <a href="https://www.youtube.com/watch?v=J7Zz_33ZeJc">Youtube</a> or <a href="http://people.csail.mit.edu/bzhou/bolei_defense.mp4">Download</a>.</li>
+        <li>[2018/04/09] PyTorch implementation of scene parsing networks trained on ADE20K is <a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">released</a>.</a></li>
+        <li>[2017/12/09] I will organize the <a href="https://interpretablevision.github.io/">Tutorial on Interpretable Machine Learning at CVPR'18</a>.</li>
+        <li>[2017/12/03] <a href="http://moments.csail.mit.edu/">Moments in Time Dataset</a> with 1 million videos from 339 actions is online! </li>
+        <li>[2017/12/03] Latest work on <a href="http://relation.csail.mit.edu/">temporal reasoning</a> in videos. Relation is all you need. </li>
+        <li>[2017/12/02] I am invited as a panelist for the <a href="http://interpretable.ml/">NIPS'17 Interpretable Machine Learning Symposium</a>.</li>
+        <li>[2017/11/15] <a href="http://cnnlocalization.csail.mit.edu/">Class Activation Mapping</a> is used to <a href="https://news.stanford.edu/2017/11/15/algorithm-outperforms-radiologists-diagnosing-pneumonia/?linkId=44774396&linkId=44811912">interpret lung disease diagnosis</a> by researchers at Stanford.</li>
+        <li>[2017/09/04] <a href="http://places2.csail.mit.edu/demo.html">Demo of Places365-CNN</a> is updated, which could predict the scene categories, attributes, and the class activation map together. <a href="https://github.com/CSAILVision/places365/blob/master/run_placesCNN_unified.py">Source code in PyTorch</a> is available.</li>
+        <li>[2017/07/06] An invited talk at <a href="https://2017.icml.cc/">ICML'17</a> <a href="http://icmlviz.github.io/">Workshop on Visualization for Deep Learning</a> about interpreting deep visual representation. Here is the <a href="http://people.csail.mit.edu/bzhou/ppt/presentation_ICML_workshop.pdf">slide</a>. </li>
+        <li>[2017/07/01] <a href="http://news.mit.edu/2017/inner-workings-neural-networks-visual-data-0630">MIT News</a> and <a href="https://techcrunch.com/2017/06/30/mit-csail-research-offers-a-fully-automated-way-to-peer-inside-neural-nets/">Techcrunch</a> cover our Network Dissection work. </li>
+        <li>[2017/06/20] I am organizing the <a href="https://places-coco2017.github.io/">Joint Workshop for COCO and Places Challenge at ICCV'17</a>.</li>
+        -->
+    </ul>
+
+<div class="papers-container papers-selected"> 
+	<h5 class="paperlo">All Publications<button type="button" class="ml-3 btn btn-light"> Show representative</button></h5>
+	<h5 class="paperhi paperhi-only">Representative Publications<button type="button" class="ml-3 btn btn-light"> Show all</button></h5>
+
+	<h5 class="pt-2 pb-1">2019</h5>	
+
+	<div class="publication media">
+           <img src="imgs/profile.png" class="papericon">
+           <div class="media-body"><b>Seeing What a GAN Cannot Generate.</b><br>
+           David Bau, Jun-Yan Zhu, Jonas Wulff, William Peebles, Hendrik Strobelt, Bolei Zhou, Antonio Torralba.<br><i>International Conference on Computer Vision (ICCV), 2019, Oral</i><br>[<a href="publication/iccv19_see_gan.pdf">PDF</a>][<a href="ganseeing.csail.mit.edu">Webpage</a>]
+	</div></div>
+
+
+
+       
+	<div class="publication media paperhi"> 
+           <img src="imgs/gan.gif" class="papericon">
+           <div class="media-body">
+			<strong>Temporal Relational Reasoning in Videos.</strong><br>
+           <u>Bolei Zhou</u>, Alex Andonian, Aude Oliva, and Antonio Torralba<br>European Conference on Computer Vision (ECCV), 2018.<br>[<a href="publication/eccv18-TRN.pdf">PDF</a>][<a href="https://arxiv.org/pdf/1711.08496.pdf">arXiv</a>][<a href="http://relation.csail.mit.edu">Webpage</a>][<a href="https://www.youtube.com/watch?v=D42erLb42_k">Demo Video</a>][<a
+               href="https://github.com/metalbubble/TRN-pytorch">Code</a>][<a href="http://news.mit.edu/2018/machine-learning-video-activity-recognition-0914">MIT News</a>]
+	</div></div>
+
+	<h2>Teaching</h2>
+		<ul>
+			<li><a href="https://course.ie.cuhk.edu.hk/~ierg6130/">IERG6130 Reinforcement Learning</a>, 2nd Term 2018-2019</li>
+			<li><a href="https://course.ie.cuhk.edu.hk/~ierg3050/">IERG3050 Simulation and Statistical Analysis</a>, 1st Term 2019-2020</li>
+		</ul>
+
+<div class="text_container">		
+    <h2>Honors</h2>
+	<div>
+        <ul>
+            <li><a href="https://research.fb.com/fellows/zhou-bolei/">Facebook Fellowship Award 2016-2018</a></li>
+            <li>BRC & LING Fellowship Award 2017</li>
+            <li>MIT Ho-Ching and Han-Ching Fund Award 2013</li>
+            <li>MIT Greater China Computer Science Fellowship 2013</li>
+            <li><a href="http://www.ie.cuhk.edu.hk/lnews/13-03-01.shtml">CUHK  Outstanding Thesis Award 2012</a></li>
+            <li><a href="http://research.microsoft.com/en-us/collaboration/global/asia-pacific/talent/fellows.aspx#2011" target="_blank">Microsoft Research Asia Fellowship 2011</a></li>
+        </ul>    
+	</div>
+</div>
+
+<div class="text_container">
+    <h2>Talks</h2>
+	<div>
+    <ul>
+        <li><a href="ppt/presentation_ICML_workshop.pdf">Interpreting Deep Visual Representations</a> at <a href="http://icmlviz.github.io/">Workshop on Visualization for Deep Learning</a>, ICML'17, Sydney.</li>
+        <li><a href="ppt/presentation_CVPR17_oraltalk.pdf">Network Dissection: Quantifying the Interpretability of Deep Visual Representations</a>, CVPR'17, Hawaii.</li>
+        <li><a href="http://deeplearning.csail.mit.edu/">Tutorial on the Deep Learning for Objects and Scenes</a>, CVPR'17, Hawaii.</li>
+        <li><a href="ppt/understandCNN_tufts.pdf">Understand and Leverage the Internal Representations of CNNs</a> at Tufts, Cornell Tech, Harvard. </li>
+        <li><a href="publication/scene_challenges2016.pdf">Challenges in Deep Sceen Understanding</a> at ECCV'16 ILSVRC and COCO joint workshop, Oct. 2016, Amsterdam.</li> 
+        <li><a href="http://places.csail.mit.edu/slide_iclr2015.pdf">Object Detectors Emerge in Deep Scene CNNs</a> at ICLR'15, May 2015, San Diego.</li>
+        <li><a href="">Learning Deep Features for Scene Recognition</a> at NIPS'14, Dec. 2014, Montreal.</li>
+        <li><a href="http://mmlab.ie.cuhk.edu.hk/projects/collectiveness/presentation_cvpr2013.pdf">Measuring Crowd Collectiveness</a> at CVPR'13, June 2013, Portland.</li>
+        <li><a href="http://mmlab.ie.cuhk.edu.hk/projects/dynamicagent/presentation_ppt.pdf">Understanding Crowd Behaviors</a> at CVPR'12, June 2012, Rhode Island.</li>
+    </ul>
+	</div>
+</div>
+
+
+<div class="text_container">
+    <h2>Media coverage</h2>
+	<div>
+    <ul>
+        <li><a href="https://venturebeat.com/2018/09/14/mit-csail-designs-ai-that-can-track-objects-over-time/">VentureBeat</a>: MIT CSAIL designs AI that can track objects over time.</li>
+        <li><a href="http://news.mit.edu/2018/machine-learning-video-activity-recognition-0914">MIT News</a>: Helping computers fill in the gaps between video frames.</li>
+        <li><a href="https://qz.com/1022156/mit-researchers-can-now-track-artificial-intelligences-decisions-back-to-single-neurons/">Quartz</a>: Track AI decisions back to single neurons.</li>
+        <li><a href="http://news.mit.edu/2017/inner-workings-neural-networks-visual-data-0630">MIT News</a>: Peering into neural networks.</li>
+        <li><a href="https://techcrunch.com/2017/06/30/mit-csail-research-offers-a-fully-automated-way-to-peer-inside-neural-nets/">TechCrunch</a>: A fully automated way to peer inside neural networks.</li>
+        <li><a href="https://www.csail.mit.edu/csail_computer_vision_team_leads_scene_parsing_challenge%20">MIT CSAIL News</a>: Scene parsing and scene classification challenges.</li>
+        <li><a href="http://techcrunch.com/2015/05/08/ai-project-designed-to-recognize-scenes-surprises-by-identifying-objects-too/" target="_blank">TechCrunch</a> and <a href="http://newsoffice.mit.edu/2015/visual-scenes-object-recognition-0508" target="_blank">MIT News</a>: Object detectors emerge in CNNs.</li>
+    </ul>
+	</div>
+</div>
+
+<div class="text_container"> 
+    <h2>Datasets & Benchmarks</h2>
+	<div>	
+    <ul>
+        <li><a href="http://moments.csail.mit.edu">Moments in Time</a>: 1-million video dataset for video scene understanding.</li>
+        <li><a href="http://placeschallenge.csail.mit.edu">Places Challenge 2017</a>: instance segmentation, scene parsing, and semantic boundary detection</li>
+        <li><a href="http://places2.csail.mit.edu">Places Database</a>: 10 million image database for scene recognition</li>
+        <li><a href="https://github.com/CSAILVision/miniplaces">Mini-Places</a>: An educational tool for deep learning in computer vision </li>
+        <li><a href="http://sceneparsing.csail.mit.edu/">MIT Scene Parsing Benchmark</a>: full scene semantic segmentation dataset</li>
+        <li><a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/">ADE20K dataset</a>: Pixel-wise annotated dataset for semantic scene understanding </li>
+    </ul>
+	</div>
+</div>
+
+<!--
+<div class="text_container">
+	<h2>Open-source softwares</h2>
+	<div>
+	<ul>
+        <li><a href="https://github.com/CSAILVision/semantic-segmentation-pytorch">Semantic Segmentation in PyTorch</a>: an efficient implementation of scene parsing networks trained on ADE20K in PyTorch</a>.
+        <li><a href="https://github.com/CSAILVision/NetDissect">Network Dissection</a>: Network visualization and annotation toolkit</a>.
+        <li><a href="https://github.com/metalbubble/unitvisseg">CNN Visualizer</a>: Neuron Visualization and Segmentation toolkit for deep CNNs</a>.
+        <li><a href="https://github.com/metalbubble/places365">Places365-CNNs</a>: scene recognition networks on Places365 with <a href="https://github.com/metalbubble/places365/tree/master/docker">docker container</a>.</li>
+        <li><a href="https://github.com/metalbubble/VQAbaseline/">iBOWIMG</a>: visual question answering baseline code in Torch.</li>  
+        <li><a href="https://github.com/metalbubble/CAM">CAM</a>: algorithm package for generating class-specific saliency map for CNN.</li>
+	    <li><a href="https://github.com/metalbubble/GoSpark">GoSpark</a>: implementation of Spark, an in-memory distributed computation framework, in Golang [<a href="publication/report_spark.pdf">Report</a>].</li>
+        <li><a href="https://github.com/metalbubble/GKLT">gKLT tracker</a>: algorithm package for extracting trajectories from videos with KLT features.</li>
+        <li><a href="https://github.com/metalbubble/collectiveness">Collectiveness descriptor</a>: a metric for crowd system order and the simulation of Self-Driven Particles. </li>
+        <li><a href="https://github.com/metalbubble/CohFilter">Coherent filtering</a>: algorithm package for detecting coherent motions in time-series data.</li>
+        <li><a href="https://github.com/metalbubble/RF_topic">Random field topic model</a>: C++ implementation of MRF on LDA with Gibbs sampling inference.</li>
+    </ul>    
+</div>
+-->
+
+<div class="text_container">
+    <h2>Professional activities</h2>
+	<div>
+    <ul>
+	<li>Co-organizer of the <a href="http://networkinterpretability.org/">AAAI'19 Workshop on Network Interpretability for Deep Learning</a>.</li>
+        <li>Organizer of the <a href="https://interpretablevision.github.io/">Tutorial on Interpretable Machine Learning for Computer Vision</a> at CVPR'18.</li>
+        <li>Panelist for the <a href="http://interpretable.ml/">NIPS'17 Interpretable Machine Learning Symposium</a>.</li>
+        <li>Co-Organizer of the <a href="https://places-coco2017.github.io/">Joint COCO and Places Recognition Challenge Workshop</a> at ICCV'17.</li>
+        <li>Organizer of the <a href="http://placeschallenge.csail.mit.edu/">Places Challenge 2017</a> at ICCV'17.</li>
+        <li>Organizer of the <a href="http://deeplearning.csail.mit.edu/">Tutorial on Deep Learning for Objects and Scenes</a> at CVPR'17.</li>
+        <li>Organizer of the <a href="http://sunw.csail.mit.edu/">5th Scene Understanding Workshop</a> at CVPR'17</li>
+        <li>Organizer of the <a href="http://places2.csail.mit.edu/results2016.html">Places365 Challenge 2016</a> and <a href="http://sceneparsing.csail.mit.edu/index_challenge.html">Scene Parsing Challenge 2016</a> at ECCV'16.</li>
+        <li>Co-organizer of <a href='http://image-net.org/challenges/LSVRC/2016/index'>ILSVRC'16 challenge workshop</a> at ECCV'16
+        <li>Organizer of the <a href='http://places2.csail.mit.edu/results2015.html'>Places Challenge 2015</a> in ICCV'15.</li>
+        <li>Conference reviewer for ICCV'17, BMVC'17, CVPR'17, ACCV'16, ECCV'16, CVPR'16, ICCV'15, CVPR'15, ECCV'14, ACCV'14.</li>
+	    <li>Journal reviewer for TPAMI, IJCV, The visual computer, Computer Vision and Image Understanding, IEEE Trans on NNLS, IEEE Trans on IP, IEEE Trans on SMC, IEEE Trans on CSVT, PLOS ONE, Pattern Recognition.</li>
+        <li>Teaching Assistant for MIT course <a href="http://6.869.csail.mit.edu/fa15" target="_blank">Advances in Computer Vision</a>. In the course a <a href="http://6.869.csail.mit.edu/fa15/project.html" target="_blank">Mini-Places Scene Classification Challenge</a> is hosted for educational purpose.</li>
+        <li>Chair of the <a href="https://sites.google.com/view/visionseminar">MIT Vision Seminar</a>.</li>
+        <li>Internships at Facebook AI Research, eBay Research Labs, Microsoft Research Asia, and Barclays Capital.</li>
+    </ul>        
+	</div>
+</div>
+<!--
+    <h2>Collaborators</h2>
+    <ul>
+        <li>I am fortunate to work with these great people: <a href="http://cvcl.mit.edu/Aude.htm">Aude Oliva</a>(MIT), <a href="http://vision.princeton.edu/people/xj/">Jianxiong Xiao</a>(Princeton), <a href="http://www.cvc.uab.es/~agata/">Agata Lapedriza</a>(UOC), <a href="http://dusp.mit.edu/faculty/jinhua-zhao">Jinhua Zhao</a>(MIT), <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>(CUHK), <a href="http://www.ie.cuhk.edu.hk/people/xotang.shtml">Xiaoou Tang</a>(CUHK), <a href="http://ins.sjtu.edu.cn/faculty/zhanghepeng">Hepeng Zhang</a>(SJTU), <a href="http://bcmi.sjtu.edu.cn/~zhangliqing/">Liqing Zhang</a>(SJTU), <a href="http://www.houxiaodi.com/">Xiaodi Hou</a>(Caltech), <a href="http://liuliu.us/">Liu Liu</a>(MIT), <a href="http://people.csail.mit.edu/khosla/">Aditya Khosla (MIT)</a>, Robinson Piramuthu(eBay Research Labs), Vignesh Jagadeesh(eBay Research Labs), Yuandong Tian(FB), Rob Fergus(NYU&FB), Arthur Szlam(FB), Sainbayar
+        Sukhbaatar(NYU), Zi Wang (MIT), Stefanie Jegelka (MIT), Hang Zhao (MIT), Xavier Puig (MIT), Sanja Fidler (UToronto), Larry Zitnick(FB).</li>
+    </ul>
+<div class="text_container">
+    <h2>Personal interests</h2>
+    <ul>
+    <li>blogs:<a href="http://urbancomputation.wordpress.com/" target="_parent">Urban Computation</a>,<a href="https://crowdbehaviordotorg.wordpress.com/" target="_parent">Crowd Behavior &amp; Psychology</a></li>
+    <li><a href="book.html">books</a>, <a href="image/beacon_hill.jpg">rock climbing (5.11C,V6)</a>, <a href="bolei_juggle.mp4">juggling</a> (recently), <a href="image/bass.jpg">bass player</a> (former <a href="image/i3.jpg">lead guitarist</a>)</a> </li>
+    </ul>
+</div>
+
+   --> 
+
+</div>
+</div>
+</body></html>
+
